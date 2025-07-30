@@ -1,304 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IronPulse | Blue-Collar Lead Generation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern lead generation for blue-collar businesses." />
+  <meta name="keywords" content="IronPulse, lead generation, blue collar, trades, marketing" />
+  <meta name="author" content="Henry Proctor" />
+  <title>IronPulse | Powering Blue-Collar Growth</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- Google Fonts Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-
   <style>
-    :root {
-      --accent-color: #f49b00;
-      --bg-dark: #1d1d1d;
-      --bg-light: #fff;
-      --text-dark: #f2f2f2;
-      --text-light: #222;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 0;
+      background-color: #1d1d1d;
+      color: #f2f2f2;
+      transition: background-color 0.3s, color 0.3s;
     }
-
-    body.light {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       background-color: #2c2c2c;
-      border-bottom: 4px solid var(--accent-color);
-      padding: 1rem 2rem;
-      transition: background-color 0.3s ease;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #f49b00;
     }
-
-    body.light header {
-      background-color: #f5f5f5;
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #f49b00;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--accent-color);
-      font-weight: 700;
-      font-size: 1.8rem;
-      user-select: none;
+    header p {
+      font-size: 1.2em;
+      margin: 5px 0 0 0;
     }
-
-    .logo svg {
-      width: 32px;
-      height: 32px;
-      fill: var(--accent-color);
-    }
-
-    body.light .logo {
-      color: var(--accent-color);
-    }
-
-    body.light .logo svg {
-      fill: var(--accent-color);
-    }
-
-    nav button#theme-toggle {
-      background: transparent;
-      border: 2px solid var(--accent-color);
-      color: var(--accent-color);
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    nav button#theme-toggle:hover {
-      background-color: var(--accent-color);
-      color: #000;
-    }
-
-    body.light nav button#theme-toggle {
-      border-color: var(--accent-color);
-      color: var(--accent-color);
-    }
-
-    main {
+    .intro, .services, .contact {
+      padding: 30px 20px;
       max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.5;
+      margin: auto;
+      text-align: center;
     }
-
-    h1, h2 {
-      font-weight: 700;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
+    .services {
+      background-color: #2a2a2a;
     }
-
-    p {
-      font-weight: 400;
-      font-size: 1.15rem;
-      margin-bottom: 2rem;
+    .services h2, .contact h2 {
+      color: #f49b00;
+      margin-bottom: 20px;
     }
-
     .services ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 3rem 0;
     }
-
     .services li {
-      background-color: #333;
-      margin-bottom: 0.8rem;
-      padding: 0.8rem 1rem;
-      border-radius: 6px;
+      margin: 10px 0;
       font-weight: 600;
-      transition: background-color 0.3s ease;
     }
-
-    body.light .services li {
-      background-color: #eee;
-    }
-
-    .contact {
-      background-color: #222;
-      padding: 2rem;
-      border-radius: 8px;
-      max-width: 500px;
-      margin: 0 auto 3rem auto;
-      box-shadow: 0 0 10px rgba(244, 155, 0, 0.3);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    body.light .contact {
-      background-color: #f9f9f9;
-      color: var(--text-light);
-      box-shadow: 0 0 10px rgba(244, 155, 0, 0.2);
-    }
-
-    .contact h2 {
-      margin-bottom: 1rem;
-      color: var(--accent-color);
-      text-align: center;
-    }
-
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .contact input,
-    .contact textarea {
-      padding: 0.75rem 1rem;
-      border: none;
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
       border-radius: 6px;
-      font-size: 1rem;
-      font-family: 'Montserrat', sans-serif;
+      border: none;
+      font-size: 1em;
     }
-
-    .contact input {
-      height: 40px;
-    }
-
-    .contact textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    body.dark .contact input,
-    body.dark .contact textarea {
-      background-color: #444;
-      color: var(--text-dark);
-    }
-
-    body.light .contact input,
-    body.light .contact textarea {
-      background-color: #fff;
-      color: var(--text-light);
-      border: 1px solid #ccc;
-    }
-
     .contact button {
-      background-color: var(--accent-color);
-      border: none;
-      border-radius: 6px;
-      padding: 0.75rem 1rem;
-      font-weight: 700;
-      font-size: 1.1rem;
+      background-color: #f49b00;
       color: #000;
+      padding: 12px 24px;
+      border: none;
+      font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      border-radius: 6px;
     }
-
-    .contact button:hover {
-      background-color: #d87a00;
-    }
-
     footer {
       text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 20px;
       background-color: #111;
-      color: #888;
-      font-size: 0.9rem;
-      user-select: none;
+      color: #aaa;
     }
-
-    body.light footer {
-      background-color: #eee;
-      color: #555;
+    .toggle-mode {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 2px solid #f49b00;
+      padding: 5px 10px;
+      color: #f49b00;
+      cursor: pointer;
+      border-radius: 5px;
     }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      main {
-        padding: 0 1rem;
-      }
-      header {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      nav button#theme-toggle {
-        width: 100%;
-      }
+    .light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    .light-mode header, .light-mode .services, .light-mode footer {
+      background-color: #f2f2f2;
+      color: #000;
+    }
+    .light-mode .toggle-mode {
+      border-color: #000;
+      color: #000;
     }
   </style>
 </head>
-<body class="dark">
-
+<body>
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
   <header>
-    <div class="logo" aria-label="IronPulse logo">
-      <!-- Simple flame icon SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M12 2C8 8 7 11 7 14a5 5 0 0010 0c0-3-1-6-5-12z"/>
-      </svg>
-      IronPulse
-    </div>
-    <nav>
-      <button id="theme-toggle" aria-label="Toggle dark and light mode">Switch to Light Mode</button>
-    </nav>
+    <h1>IronPulse</h1>
+    <p>Powering Blue-Collar Growth</p>
   </header>
 
-  <main>
-    <section class="intro">
-      <h1>Fueling growth for blue-collar businesses</h1>
-      <p>
-        With 9 years of sales experience across small businesses, large corporations, and startups — in 4 different industries — I understand what it takes to drive results.
-        IronPulse blends digital strategy with real-world hustle to deliver leads that convert.
-      </p>
-    </section>
+  <section class="intro">
+    <p>With nearly a decade of sales and marketing experience across industries, IronPulse exists to drive high-quality leads and growth for blue-collar businesses using digital-first strategies and relentless execution.</p>
+  </section>
 
-    <section class="services">
-      <h2>What We Do</h2>
-      <ul>
-        <li>Google Ads Management</li>
-        <li>Facebook/Instagram Ad Campaigns</li>
-        <li>Local SEO & Website Optimization</li>
-        <li>CRM Automation & Lead Nurture</li>
-        <li>Landing Page Creation & Tracking</li>
-      </ul>
-    </section>
+  <section class="services">
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Google & Meta Ad Management</li>
+      <li>SEO & Local Optimization</li>
+      <li>Lead Funnel Design</li>
+      <li>CRM Setup & Automations</li>
+      <li>Analytics & Campaign Reporting</li>
+    </ul>
+  </section>
 
-    <section class="contact">
-      <h2>Get in Touch</h2>
-      <form action="https://formspree.io/f/xwpqqllw" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="_replyto" placeholder="Your Email" required />
-        <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p>Or email us directly: <strong>hproc725@gmail.com</strong></p>
-    </section>
-  </main>
+  <section class="contact">
+    <h2>Work With Us</h2>
+    <form action="https://formspree.io/f/xwpqqllw" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="What do you need help with?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <strong>hproc725@gmail.com</strong></p>
+  </section>
 
   <footer>
     <p>&copy; 2025 IronPulse. Built by Henry Proctor. All rights reserved.</p>
   </footer>
 
   <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    toggleBtn.addEventListener('click', () => {
-      if(body.classList.contains('dark')) {
-        body.classList.remove('dark');
-        body.classList.add('light');
-        toggleBtn.textContent = 'Switch to Dark Mode';
-      } else {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        toggleBtn.textContent = 'Switch to Light Mode';
-      }
-    });
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
   </script>
 </body>
 </html>

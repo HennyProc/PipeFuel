@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="GritForce helps blue-collar businesses generate quality leads through digital ads, SEO, and automation.">
+<title>GritForce | Lead Generation for Blue-Collar Businesses</title>
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #1f1f1f;
+color: #f4f4f4;
+}
+header {
+background-color: #111;
+padding: 2rem;
+text-align: center;
+}
+header h1 {
+font-size: 3rem;
+margin: 0;
+color: #e63946;
+letter-spacing: 2px;
+}
+header p {
+font-size: 1.2rem;
+color: #ccc;
+}
+section {
+padding: 2rem;
+max-width: 1000px;
+margin: 0 auto;
+}
+h2 {
+color: #f4a261;
+border-bottom: 2px solid #333;
+padding-bottom: 0.5rem;
+}
+ul {
+list-style: none;
+padding: 0;
+}
+ul li::before {
+content: "🔧";
+margin-right: 0.5rem;
+}
+form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+margin-top: 1rem;
+}
+input, textarea {
+padding: 0.75rem;
+background-color: #333;
+border: none;
+color: #fff;
+font-size: 1rem;
+}
+input:focus, textarea:focus {
+outline: 2px solid #e63946;
+}
+button {
+background-color: #e63946;
+color: white;
+padding: 0.75rem;
+font-size: 1rem;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+button:hover {
+background-color: #d62828;
+}
+footer {
+background-color: #111;
+text-align: center;
+padding: 1rem;
+font-size: 0.9rem;
+color: #888;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>GritForce</h1>
+<p>Fueling Blue-Collar Growth with Digital Lead Generation</p>
+</header>
+
+<section>
+<h2>About Us</h2>
+<p>
+With over 9 years of experience in sales across small businesses, large corporations, and startups — in 4 different industries — I understand what it takes to drive growth. At GritForce, we deliver high-impact leads to blue-collar businesses through a mix of digital strategy and gritty execution.
+</p>
+</section>
+
+<section>
+<h2>Our Services</h2>
+<ul>
+<li>Google Ads Management</li>
+<li>Facebook & Instagram Ads</li>
+<li>Search Engine Optimization (SEO)</li>
+<li>CRM Follow-Up Automation</li>
+<li>Landing Page Creation & Optimization</li>
+</ul>
+</section>
+
+<section>
+<h2>Contact Us</h2>
+<p>Want to boost your lead flow? Let’s talk.</p>
+<form action="mailto:hproc725@gmail.com" method="POST" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required />
+<input type="email" name="email" placeholder="Your Email" required />
+<textarea name="message" rows="5" placeholder="Tell us about your business or what you need..." required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+&copy; 2025 GritForce. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -2,135 +2,303 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lead generation solutions for blue-collar businesses that want to grow fast with real results." />
-  <meta name="keywords" content="lead generation, blue collar marketing, trade services marketing, SEO, ads, CRM" />
-  <meta name="author" content="Henry Proctor" />
-  <title>GritForce | Blue-Collar Lead Generation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IronPulse | Blue-Collar Lead Generation</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
+  <!-- Google Fonts Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
   <style>
+    :root {
+      --accent-color: #f49b00;
+      --bg-dark: #1d1d1d;
+      --bg-light: #fff;
+      --text-dark: #f2f2f2;
+      --text-light: #222;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1d1d1d;
-      color: #f2f2f2;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
+    body.light {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
     header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background-color: #2c2c2c;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 4px solid #f49b00;
+      border-bottom: 4px solid var(--accent-color);
+      padding: 1rem 2rem;
+      transition: background-color 0.3s ease;
     }
-    header h1 {
-      font-size: 2.5em;
-      margin: 0;
-      color: #f49b00;
+
+    body.light header {
+      background-color: #f5f5f5;
     }
-    .intro {
-      padding: 20px;
-      text-align: center;
-      font-size: 1.2em;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-color);
+      font-weight: 700;
+      font-size: 1.8rem;
+      user-select: none;
+    }
+
+    .logo svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--accent-color);
+    }
+
+    body.light .logo {
+      color: var(--accent-color);
+    }
+
+    body.light .logo svg {
+      fill: var(--accent-color);
+    }
+
+    nav button#theme-toggle {
+      background: transparent;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav button#theme-toggle:hover {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    body.light nav button#theme-toggle {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    main {
       max-width: 800px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.5;
     }
-    .services {
-      background: #333;
-      padding: 30px;
-      text-align: center;
+
+    h1, h2 {
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
     }
-    .services h2 {
-      color: #f49b00;
+
+    p {
+      font-weight: 400;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
     }
+
     .services ul {
       list-style: none;
       padding: 0;
+      margin: 0 0 3rem 0;
     }
+
     .services li {
-      margin: 10px 0;
+      background-color: #333;
+      margin-bottom: 0.8rem;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
       font-weight: 600;
+      transition: background-color 0.3s ease;
     }
+
+    body.light .services li {
+      background-color: #eee;
+    }
+
     .contact {
-      padding: 30px;
       background-color: #222;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: 0 auto 3rem auto;
+      box-shadow: 0 0 10px rgba(244, 155, 0, 0.3);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.light .contact {
+      background-color: #f9f9f9;
+      color: var(--text-light);
+      box-shadow: 0 0 10px rgba(244, 155, 0, 0.2);
+    }
+
+    .contact h2 {
+      margin-bottom: 1rem;
+      color: var(--accent-color);
       text-align: center;
     }
-    .contact h2 {
-      color: #f49b00;
-    }
+
     .contact form {
-      max-width: 400px;
-      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
+
+    .contact input,
+    .contact textarea {
+      padding: 0.75rem 1rem;
       border: none;
-      border-radius: 4px;
-      font-size: 1em;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
     }
+
+    .contact input {
+      height: 40px;
+    }
+
+    .contact textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    body.dark .contact input,
+    body.dark .contact textarea {
+      background-color: #444;
+      color: var(--text-dark);
+    }
+
+    body.light .contact input,
+    body.light .contact textarea {
+      background-color: #fff;
+      color: var(--text-light);
+      border: 1px solid #ccc;
+    }
+
     .contact button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #f49b00;
-      color: #000;
+      background-color: var(--accent-color);
       border: none;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #000;
       cursor: pointer;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
+
+    .contact button:hover {
+      background-color: #d87a00;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 1.5rem 1rem;
       background-color: #111;
-      color: #aaa;
+      color: #888;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    body.light footer {
+      background-color: #eee;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      main {
+        padding: 0 1rem;
+      }
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      nav button#theme-toggle {
+        width: 100%;
+      }
     }
   </style>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-Y');
-  </script>
 </head>
+<body class="dark">
 
-<body>
   <header>
-    <h1>GritForce</h1>
-    <p>Fueling growth for blue-collar businesses</p>
+    <div class="logo" aria-label="IronPulse logo">
+      <!-- Simple flame icon SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 2C8 8 7 11 7 14a5 5 0 0010 0c0-3-1-6-5-12z"/>
+      </svg>
+      IronPulse
+    </div>
+    <nav>
+      <button id="theme-toggle" aria-label="Toggle dark and light mode">Switch to Light Mode</button>
+    </nav>
   </header>
 
-  <section class="intro">
-    <p>With 9 years of sales experience across small businesses, large corporations, and startups — in 4 different industries — I understand what it takes to drive results. GritForce blends digital strategy with real-world hustle to deliver leads that convert.</p>
-  </section>
+  <main>
+    <section class="intro">
+      <h1>Fueling growth for blue-collar businesses</h1>
+      <p>
+        With 9 years of sales experience across small businesses, large corporations, and startups — in 4 different industries — I understand what it takes to drive results.
+        IronPulse blends digital strategy with real-world hustle to deliver leads that convert.
+      </p>
+    </section>
 
-  <section class="services">
-    <h2>What We Do</h2>
-    <ul>
-      <li>Google Ads Management</li>
-      <li>Facebook/Instagram Ad Campaigns</li>
-      <li>Local SEO & Website Optimization</li>
-      <li>CRM Automation & Lead Nurture</li>
-      <li>Landing Page Creation & Tracking</li>
-    </ul>
-  </section>
+    <section class="services">
+      <h2>What We Do</h2>
+      <ul>
+        <li>Google Ads Management</li>
+        <li>Facebook/Instagram Ad Campaigns</li>
+        <li>Local SEO & Website Optimization</li>
+        <li>CRM Automation & Lead Nurture</li>
+        <li>Landing Page Creation & Tracking</li>
+      </ul>
+    </section>
 
-  <section class="contact">
-    <h2>Get in Touch</h2>
-    <form action="https://formspree.io/f/xwpqqllw" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Or email us directly: <strong>hproc725@gmail.com</strong></p>
-  </section>
+    <section class="contact">
+      <h2>Get in Touch</h2>
+      <form action="https://formspree.io/f/xwpqqllw" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p>Or email us directly: <strong>hproc725@gmail.com</strong></p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 GritForce. Built by Henry Proctor. All rights reserved.</p>
+    <p>&copy; 2025 IronPulse. Built by Henry Proctor. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      if(body.classList.contains('dark')) {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        toggleBtn.textContent = 'Switch to Dark Mode';
+      } else {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        toggleBtn.textContent = 'Switch to Light Mode';
+      }
+    });
+  </script>
 </body>
 </html>

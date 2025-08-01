@@ -2,150 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modern lead generation for blue-collar businesses." />
-  <meta name="keywords" content="IronPulse, lead generation, blue collar, trades, marketing" />
-  <meta name="author" content="Henry Proctor" />
-  <title>IronPulse | Powering Blue-Collar Growth</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #1d1d1d;
-      color: #f2f2f2;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    header {
-      background-color: #2c2c2c;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 4px solid #f49b00;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      color: #f49b00;
-    }
-    header p {
-      font-size: 1.2em;
-      margin: 5px 0 0 0;
-    }
-    .intro, .services, .contact {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    .services {
-      background-color: #2a2a2a;
-    }
-    .services h2, .contact h2 {
-      color: #f49b00;
-      margin-bottom: 20px;
-    }
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
-    .services li {
-      margin: 10px 0;
-      font-weight: 600;
-    }
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: none;
-      font-size: 1em;
-    }
-    .contact button {
-      background-color: #f49b00;
-      color: #000;
-      padding: 12px 24px;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #111;
-      color: #aaa;
-    }
-    .toggle-mode {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: 2px solid #f49b00;
-      padding: 5px 10px;
-      color: #f49b00;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .light-mode {
-      background-color: #ffffff;
-      color: #000000;
-    }
-    .light-mode header, .light-mode .services, .light-mode footer {
-      background-color: #f2f2f2;
-      color: #000;
-    }
-    .light-mode .toggle-mode {
-      border-color: #000;
-      color: #000;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Pulse</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
   <header>
-    <h1>IronPulse</h1>
-    <p>Powering Blue-Collar Growth</p>
+    <nav>
+      <ul class="menu">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why You Need Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#industries">Industries We Help</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <img src="logo.png" alt="Iron Pulse Logo" class="logo">
   </header>
-
-  <section class="intro">
-    <p>With nearly a decade of sales and marketing experience across industries, IronPulse exists to drive high-quality leads and growth for blue-collar businesses using digital-first strategies and relentless execution.</p>
-  </section>
-
-  <section class="services">
-    <h2>What We Offer</h2>
+  <main>
+    
+<section id="services" class="section">
+  <div class="container">
+    <h2>🔧 Services — Built for Results</h2>
+    <p>Iron Pulse isn’t just another marketing company — we deliver <strong>ready-to-convert</strong> leads and tools that make blue-collar businesses money. Here's what you get:</p>
     <ul>
-      <li>Google & Meta Ad Management</li>
-      <li>SEO & Local Optimization</li>
-      <li>Lead Funnel Design</li>
-      <li>CRM Setup & Automations</li>
-      <li>Analytics & Campaign Reporting</li>
+      <li><strong>🚀 Exclusive Leads:</strong> You own every lead. We never resell or recycle.</li>
+      <li><strong>📍 Local SEO Boost:</strong> Rank higher in Google Maps and show up when customers search.</li>
+      <li><strong>🧲 Branded Funnels:</strong> High-converting landing pages tailored to your trade and territory.</li>
+      <li><strong>📞 Automated Follow-Up System:</strong> We contact leads immediately — by email, text, or call — increasing close rates by over 45%. You focus on the work while we handle lead nurturing.</li>
+      <li><strong>📊 Conversion Tracking:</strong> Know where every lead comes from, what they cost, and how much they’re worth.</li>
+      <li><strong>🔌 CRM Integration:</strong> Already using a CRM? We plug in. Don’t have one? We’ll set it up.</li>
+      <li><strong>⭐ Reputation Management:</strong> More 5-star reviews. Less stress. We make it easy for happy customers to shout your name.</li>
     </ul>
-  </section>
+    <blockquote><strong>Iron Pulse clients</strong> report an average <strong>23% revenue increase in 90 days</strong>, with an <strong>average cost-per-lead under $40</strong> — and 70% of those leads turn into booked estimates or closed jobs.</blockquote>
+  </div>
+</section>
 
-  <section class="contact">
-    <h2>Work With Us</h2>
-    <form action="https://formspree.io/f/xwpqqllw" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="4" placeholder="What do you need help with?" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Email: <strong>hproc725@gmail.com</strong></p>
-  </section>
-
+  </main>
   <footer>
-    <p>&copy; 2025 IronPulse. Built by Henry Proctor. All rights reserved.</p>
+    <p>&copy; 2025 Iron Pulse. All rights reserved.</p>
   </footer>
-
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
-    }
-  </script>
 </body>
 </html>
